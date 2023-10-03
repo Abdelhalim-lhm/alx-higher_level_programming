@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 low = "abcdefghijklmnopqrstqwxyz"
 upp = "ABCDEFGHIJKLMNOPQRSTQWXYZ"
+
+
 def uppercase(str):
     new_str = ""
     for i in range(len(str)):
