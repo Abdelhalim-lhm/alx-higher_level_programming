@@ -7,7 +7,7 @@ for i in range(90):
             double_j = "{:02d}".format(j)
             if set(double_i) == set(double_j):
                 is_dup = True
-                break 
+                break
         if is_dup:
             print("{:02d}, ".format(i), end='')
     else:
