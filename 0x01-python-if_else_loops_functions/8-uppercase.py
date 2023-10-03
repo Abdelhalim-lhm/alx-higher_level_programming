@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-low = "abdcdefghijklmnopqrstqwxyz"
+low = "abcdefghijklmnopqrstqwxyz"
 upp = "ABCDEFGHIJKLMNOPQRSTQWXYZ"
 def uppercase(str):
     new_str = ""
