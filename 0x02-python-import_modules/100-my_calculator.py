@@ -7,8 +7,8 @@ if __name__ == "__main__":
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(0)
     else:
-        a = sys.argv[1]
-        b = sys.argv[3]
+        a = int(sys.argv[1])
+        b = int(sys.argv[3])
         op = sys.argv[2]
         if op == "+":
             print("{} + {} = {}".format(a, b, add(a, b)))
