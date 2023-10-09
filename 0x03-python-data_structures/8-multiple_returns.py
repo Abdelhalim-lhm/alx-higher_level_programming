@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
     lenght = len(sentence)
-    if length == 0:
+    if lenght == 0:
         F_letter = None
     else:
         F_letter = sentence[0]
