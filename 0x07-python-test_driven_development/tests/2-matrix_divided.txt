@@ -1,0 +1,43 @@
+Import matrix_divided function:
+
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Test simple main:
+
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Test matrix with string argument:
+
+	>>> matrix_divided([["hello", 2, 3], [4, 5, 6]], 3)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test matrix with different size:
+
+	>>> matrix_divided([[1, 2, 3], [4, 5]], 3)
+        Traceback (most recent call last):
+        ...
+	TypeError: Each row of the matrix must have the same size
+
+Test string div:
+
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], "String")
+        Traceback (most recent call last):
+        ...
+	TypeError: div must be a number
+
+Test div zero:
+
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+        Traceback (most recent call last):
+        ...
+	ZeroDivisionError: division by zero
+
+Test no argument:
+
+	>>> matrix_divided()
+        Traceback (most recent call last):
+        ...
+	TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
