@@ -61,7 +61,7 @@ class Rectangle:
         return str1
 
     def __repr__(self):
-        return f"Rectangle({self.width}, {self.height})"
+        return f"Rectangle({str(self.width)}, {str(self.height)})"
 
     def __del__(self):
         print("Bye rectangle...")
