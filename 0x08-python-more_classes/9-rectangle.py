@@ -41,27 +41,27 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        return self.width * self.height
+        return self.__width * self.__height
 
     def perimeter(self):
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
         else:
-            return 2 * (self.width + self.height)
+            return 2 * (self.__width + self.__height)
 
     def __str__(self):
         str1 = ""
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return str1
         for i in range(self.height):
-            for j in range(self.width):
+            for j in range(self.__width):
                 str1 += str(self.print_symbol)
-            if i < self.height - 1:
+            if i < self.__height - 1:
                 str1 += "\n"
         return str1
 
     def __repr__(self):
-        return f"Rectangle({self.width}, {self.height})"
+        return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
         print("Bye rectangle...")
