@@ -9,9 +9,9 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         ''' instance initialisation '''
-        self.height = height
-        self.width = width
         Rectangle.number_of_instances += 1
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -57,7 +57,7 @@ class Rectangle:
         str1 = ""
         if self.__width == 0 or self.__height == 0:
             return str1
-        for i in range(self.height):
+        for i in range(self.__height):
             for j in range(self.__width):
                 str1 += str(self.print_symbol)
             if i < self.__height - 1:
