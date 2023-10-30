@@ -55,7 +55,7 @@ class Rectangle:
             return str1
         for i in range(self.height):
             for j in range(self.width):
-                str1 += self.print_symbol
+                str1 += str(self.print_symbol)
             if i < self.height - 1:
                 str1 += "\n"
         return str1
@@ -80,4 +80,5 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
+        ''' returns a new Rectangle instance with width == height == size'''
         return cls(size, size)
