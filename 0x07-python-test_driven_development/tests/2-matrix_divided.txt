@@ -41,3 +41,9 @@ Test no argument:
         Traceback (most recent call last):
         ...
 	TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Test div infinity:
+
+	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], float('inf'))
+	[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+

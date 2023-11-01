@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+''' matrix_divided module '''
+
+
 def matrix_divided(matrix, div):
     ''' function that divides all elements of a matrix '''
     for row in matrix:
