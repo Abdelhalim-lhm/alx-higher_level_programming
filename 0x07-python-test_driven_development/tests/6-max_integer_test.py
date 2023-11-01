@@ -35,6 +35,14 @@ class TestMaxInteger(unittest.TestCase):
         """ Unittest not a list case """
         with self.assertRaises(TypeError):
             max_integer(1.5)
+    
+    def test_one(self):
+        """ Unittest one elemnt case """
+        self.assertEqual(max_integer([4]), 4)
+    
+    def test_middle(self):
+        """ Unittest max in the middle case """
+        self.assertEqual(max_integer([1, 4, 3, 2]), 4)
 
 
 if __name__ == "__main__":
