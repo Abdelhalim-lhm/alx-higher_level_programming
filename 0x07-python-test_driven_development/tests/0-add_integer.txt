@@ -53,7 +53,7 @@ Test add no argument:
         ...
         TypeError: a must be an integer
 
-Test float overflow:
+Test add infinity:
 
 	>>> add_integer(float('-inf'), float('inf'))
 	Traceback (most recent call last):
@@ -66,4 +66,11 @@ Test float Nan:
 	Traceback (most recent call last):
 	...
 	ValueError: cannot convert float NaN to integer
+
+Test float overflow:
+    
+	>>> add_integer(float('inf'), 0)
+	Traceback (most recent call last):
+	...
+	OverflowError: cannot convert float infinity to integer
 
