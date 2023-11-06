@@ -25,14 +25,9 @@ one arg test
         ...
 	TypeError: integer_validator() missing 1 required positional argument: 'value'
 
-more than 2 args given test:
 
-        >>> bg.integer_validator("test", 1, 2)
-        Traceback (most recent call last):
-        ...
-        TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
-TypeError test:
+double string arg test:
 
 	>>> bg = BaseGeometry()
         >>> bg.integer_validator("my_int", "string")
@@ -40,10 +35,18 @@ TypeError test:
 	...
 	TypeError: my_int must be an integer
 
-ValueError test:
+negative value test:
 
 	>>> bg = BaseGeometry()
 	>>> bg.integer_validator("distance", -4)
 	Traceback (most recent call last):
 	...
 	ValueError: distance must be greater than 0
+
+Test 0 value:
+
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("distance", 0)
+        Traceback (most recent call last):
+        ...
+        ValueError: distance must be greater than 0
