@@ -29,8 +29,9 @@ test append:
 	>>> l1
 	[1, 2, 3]
 
-already sorted test:
+not defined list:
 
-	>>> l1 = MyList([1, 2, 3])
-	>>> l1.print_sorted()
-	[1, 2, 3]
+	>>> l2.print_sorted()
+	Traceback (most recent call last):
+	...
+	NameError: name 'l2' is not defined
