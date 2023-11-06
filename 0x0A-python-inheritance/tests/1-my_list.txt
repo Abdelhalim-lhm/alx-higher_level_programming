@@ -2,6 +2,14 @@ Import module:
 
         >>> MyList = __import__('1-my_list').MyList
 
+Test no args:
+
+	>>> l1 = MyList()
+	>>> l1.__class__.print_sorted()
+	Traceback (most recent call last):
+	...
+	TypeError: print_sorted() missing 1 required positional argument: 'self'
+
 Normal test:
 
         >>> l1 = MyList([1, 3, 2])
