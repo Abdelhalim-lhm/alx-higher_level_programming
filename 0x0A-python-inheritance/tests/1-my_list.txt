@@ -14,6 +14,12 @@ negative test:
         >>> l1.print_sorted()
         [-3, -2, -1]
 
+mixed test:
+
+	>>> l1 = MyList([1, 0, -1])
+        >>> l1.print_sorted()
+        [-1, 0, 1]
+
 empty list test:
 
 	>>> l1 = MyList()
