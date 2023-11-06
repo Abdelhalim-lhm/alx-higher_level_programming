@@ -50,3 +50,11 @@ Test 0 value:
         Traceback (most recent call last):
         ...
         ValueError: distance must be greater than 0
+
+Test bool value:
+
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("my_int", True)
+        Traceback (most recent call last):
+        ...
+        TypeError: my_int must be an integer
