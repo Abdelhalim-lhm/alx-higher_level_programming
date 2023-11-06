@@ -29,10 +29,8 @@ test append:
 	>>> l1
 	[1, 2, 3]
 
-attribute test:
+already sorted test:
 
-	>>> l1 = [1, 2, 3]
+	>>> l1 = MyList([1, 2, 3])
 	>>> l1.print_sorted()
-	Traceback (most recent call last):
-	...
-	AttributeError: 'list' object has no attribute 'print_sorted'
+	[1, 2, 3]
