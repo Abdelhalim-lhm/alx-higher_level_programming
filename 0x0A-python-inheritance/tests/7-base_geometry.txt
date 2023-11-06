@@ -1,0 +1,42 @@
+Import Module:
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Normal test:
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my_int", 12)
+
+Empty stirng test:
+
+	>>> bg.integer_validator("", 1)
+
+no agrs test:
+
+	>>> bg.integer_validator()
+        Traceback (most recent call last):
+        ...
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+one arg test
+
+	>>> bg.integer_validator("test")
+        Traceback (most recent call last):
+        ...
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+TypeError test:
+
+	>>> bg = BaseGeometry()
+        >>> bg.integer_validator("my_int", "string")
+	Traceback (most recent call last):
+	...
+	TypeError: my_int must be an integer
+
+ValueError test:
+
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("distance", -4)
+	Traceback (most recent call last):
+	...
+	ValueError: distance must be greater than 0
