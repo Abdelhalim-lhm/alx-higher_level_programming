@@ -75,6 +75,29 @@ Test list value:
         ...
         TypeError: my_int must be an integer
 
+Test None value:
+
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("my_int", None)
+        Traceback (most recent call last):
+        ...
+        TypeError: my_int must be an integer
+
+Test Tuple value:
+
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("my_int", (1, 2))
+        Traceback (most recent call last):
+        ...
+        TypeError: my_int must be an integer
+
+Test Dict value:
+
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("my_int", {1, 2})
+        Traceback (most recent call last):
+        ...
+        TypeError: my_int must be an integer
 
 Test area:
 
