@@ -57,3 +57,14 @@ class Base:
             return None
         new_inst.update(**dictionary)
         return new_inst
+
+    @classmethod
+    def load_from_file(cls):
+        ''' File to instances '''
+        filename = "{}.json".format(cls.__name__)
+        if filename:
+            with open(filename, 'r', encoding='utf-8') as my_file:
+                return [cls.create(**line) for line in
+                        cls.from_json_string(my_file.read())]
+        else:
+            return []
