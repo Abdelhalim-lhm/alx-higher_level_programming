@@ -61,8 +61,9 @@ class Base:
     @classmethod
     def load_from_file(cls):
         ''' File to instances '''
+        import os
         filename = "{}.json".format(cls.__name__)
-        if filename:
+        if os.path.exists(filename):
             with open(filename, 'r', encoding='utf-8') as my_file:
                 return [cls.create(**line) for line in
                         cls.from_json_string(my_file.read())]
