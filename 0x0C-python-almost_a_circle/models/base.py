@@ -33,6 +33,5 @@ class Base:
             with open(filename, 'w', encoding='utf-8') as my_file:
                 return my_file.write(cls.to_json_string(list_dicts))
         else:
-             with open(filename, 'w', encoding='utf-8') as my_file:
+            with open(filename, 'w', encoding='utf-8') as my_file:
                 return my_file.write(cls.to_json_string(list_objs))
-
