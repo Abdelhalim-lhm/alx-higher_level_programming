@@ -82,3 +82,15 @@ class Rectangle(Base):
         ''' str presentation '''
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - \
 {self.__width}/{self.__height}"
+
+    def update(self, *args):
+        if len(args) >= 1:
+            self.id = args[0] if args[0] is not None else self.id
+        if len(args) >= 2:
+            self.width = args[1] if args[1] is not None else self.width
+        if len(args) >= 3:
+            self.height = args[2] if args[2] is not None else self.height
+        if len(args) >= 4:
+            self.x = args[3] if args[3] is not None else self.x
+        if len(args) >= 5:
+            self.y = args[4] if args[4] is not None else self.y
