@@ -44,3 +44,10 @@ class Square(Rectangle):
                 self.x = value
             if key == 'y' and value is not None:
                 self.y = value
+
+    def to_dictionary(self):
+        ''' Dictionnary representation '''
+        rect = {'id': self.id, 'x': self.x, 'size': self.size,
+                'y': self.y,
+                }
+        return rect
