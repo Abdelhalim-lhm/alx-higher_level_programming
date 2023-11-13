@@ -67,10 +67,16 @@ class Rectangle(Base):
 
     def display(self):
         ''' print rectangle '''
-        for i in range(self.__height):
-            for j in range(self.__width):
-                print("#", end="")
-            print()
+        for i in range(self.__height + self.__y):
+            if i < self.__y:
+                print()
+            else:
+                for j in range(self.__width + self.__x):
+                    if j < self.__x:
+                        print(" ", end="")
+                    else:
+                        print("#", end="")
+                print()
 
     def __str__(self):
         ''' str presentation '''
