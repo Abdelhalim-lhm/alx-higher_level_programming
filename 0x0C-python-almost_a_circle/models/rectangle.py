@@ -108,3 +108,9 @@ class Rectangle(Base):
                 self.x = value
             if key == 'y' and value is not None:
                 self.y = value
+
+    def to_dictionary(self):
+        rect = {'x': self.x, 'y': self.y, 'id': self.id,
+                'height': self.height, 'width': self.width
+                }
+        return rect
