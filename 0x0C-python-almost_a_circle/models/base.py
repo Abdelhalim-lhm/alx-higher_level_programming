@@ -28,6 +28,11 @@ class Base:
     def save_to_file(cls, list_objs):
         ''' save to file definition '''
         filename = "{}.json".format(cls.__name__)
-        list_dicts = [obj.to_dictionary() for obj in list_objs]
-        with open(filename, 'w', encoding='utf-8') as my_file:
-            return my_file.write(cls.to_json_string(list_dicts))
+        if list_objs:
+            list_dicts = [obj.to_dictionary() for obj in list_objs]
+            with open(filename, 'w', encoding='utf-8') as my_file:
+                return my_file.write(cls.to_json_string(list_dicts))
+        else:
+             with open(filename, 'w', encoding='utf-8') as my_file:
+                return my_file.write(cls.to_json_string(list_objs))
+
