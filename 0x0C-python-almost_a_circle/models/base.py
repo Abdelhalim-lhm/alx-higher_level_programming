@@ -5,6 +5,7 @@
 class Base:
     ''' Class Base definition '''
     __nb_objects = 0
+
     def __init__(self, id=None):
         ''' Class Base constructor '''
         self.id = id
