@@ -110,6 +110,7 @@ class Rectangle(Base):
                 self.y = value
 
     def to_dictionary(self):
+        ''' Dictionnary representation '''
         rect = {'x': self.x, 'y': self.y, 'id': self.id,
                 'height': self.height, 'width': self.width
                 }
