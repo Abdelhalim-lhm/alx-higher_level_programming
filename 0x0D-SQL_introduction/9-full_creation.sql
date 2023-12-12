@@ -5,4 +5,4 @@ CREATE TABLE IF NOT EXISTS seconde_table (id INT,
 INSERT INTO seconde_table (id, name, score) VALUES (1, "John", 10);
 INSERT INTO seconde_table (id, name, score) VALUES (2, "Alex", 3);
 INSERT INTO seconde_table (id, name, score) VALUES (3, "Bob", 14);
-INSERT INTO seconde_table (id, name, score) VALUES (4, "Geoge", 8);
+INSERT INTO seconde_table (id, name, score) VALUES (4, "George", 8);
