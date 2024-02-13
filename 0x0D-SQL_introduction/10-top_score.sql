@@ -1,2 +1,2 @@
--- script that lists in ordre all records of the table second_table
+-- Script that lists in desendent ordre all records of the table second_table
 SELECT score, name FROM second_table ORDER BY score DESC;

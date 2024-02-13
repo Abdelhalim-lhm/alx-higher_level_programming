@@ -1,4 +1,4 @@
--- Write a script that creates a table second_table in the database
+-- Script that creates a table second_table in the database with four records
 CREATE TABLE IF NOT EXISTS second_table (id INT,
 	name VARCHAR(256),
 	score INT);
