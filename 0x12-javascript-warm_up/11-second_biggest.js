@@ -5,8 +5,8 @@ if (process.argv.length < 4) {
   const array = [];
   const range = process.argv.length;
   for (let i = 2; i < range; i++) {
-    array.push(process.argv[i]);
+    array.push(Number(process.argv[i]));
   }
   array.sort();
-  console.log(array[range - 4]);
+  console.log(array[array.length - 2]);
 }
