@@ -7,6 +7,6 @@ if (process.argv.length < 4) {
   for (let i = 2; i < range; i++) {
     array.push(Number(process.argv[i]));
   }
-  array.sort();
+  array.sort((a, b) => a - b);
   console.log(array[array.length - 2]);
 }
