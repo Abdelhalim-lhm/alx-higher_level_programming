@@ -13,10 +13,9 @@ def main():
     cur = conn.cursor()
     cur.execute("""SELECT cities.name FROM cities
             INNER JOIN states ON states.id = cities.state_id
-            WHERE states.name = %s
-            ORDER BY cities.id""", (sys.argv[4],))
+            WHERE states.name = %s""", (sys.argv[4],))
     query_rows = cur.fetchall()
-    city_names = set(row[0] for row in query_rows)
+    city_names = list(row[0] for row in query_rows)
     print(*city_names, sep=", ")
     cur.close()
     conn.close()
