@@ -5,6 +5,7 @@ in the header of the response """
 import urllib.request
 import sys
 
+
 with urllib.request.urlopen(sys.argv[1]) as response:
     r = response.headers
     the_id = r.get('X-Request-Id')
