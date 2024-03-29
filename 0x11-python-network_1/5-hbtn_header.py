@@ -5,5 +5,5 @@ import sys
 
 if __name__ == "__main__":
     r = requests.get(sys.argv[1])
-    the_id = r.headers["X-Request-Id"]
+    the_id = r.headers.get("X-Request-Id")
     print(the_id)
